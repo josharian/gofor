@@ -25,29 +25,29 @@ as of Sep 25, 2013, yielded the following counts. (Results accounting for > 1% a
 5472 counting loop min 0, max literal, stride 1: for i := 0; i < N; i++ {
 4616 counting loop min non-literal, max non-literal, stride 1: for i := ??; i < ??; i++ {
 1728 missing init
-1535 counting loop min const, max non-const, stride 1
+1535 counting loop min literal, max non-literal, stride 1
 1508 missing post
- 908 counting loop min const, max const, stride 1
- 671 counting loop min non-const, max const, stride 1
+ 908 counting loop min literal, max literal, stride 1
+ 671 counting loop min non-literal, max literal, stride 1
  605 init multiple values
- 554 counting loop min 0, max non-const, stride const
+ 554 counting loop min 0, max non-literal, stride literal
  236 cond lhs not identifier
- 236 counting loop min 0, max non-const, stride non-const
+ 236 counting loop min 0, max non-literal, stride non-literal
  227 post assign not += or -= (but might be i = i - 1, oh well)
- 191 counting loop min 0, max const, stride const
- 162 counting loop min non-const, max non-const, stride non-const
- 103 counting loop min non-const, max non-const, stride const
-  89 counting loop min const, max const, stride const
-  78 counting loop min const, max non-const, stride const
+ 191 counting loop min 0, max literal, stride literal
+ 162 counting loop min non-literal, max non-literal, stride non-literal
+ 103 counting loop min non-literal, max non-literal, stride literal
+  89 counting loop min literal, max literal, stride literal
+  78 counting loop min literal, max non-literal, stride literal
   76 init lhs != cond lhs
-  59 counting loop min non-const, max const, stride const
+  59 counting loop min non-literal, max literal, stride literal
   26 post assign multiple values
-  19 counting loop min const, max non-const, stride non-const
+  19 counting loop min literal, max non-literal, stride non-literal
   17 init not i := n
-  15 counting loop min const, max const, stride non-const
+  15 counting loop min literal, max literal, stride non-literal
   13 init lhs != post incdec lhs
-   6 counting loop min 0, max const, stride non-const
-   4 counting loop min non-const, max const, stride non-const
+   6 counting loop min 0, max literal, stride non-literal
+   4 counting loop min non-literal, max literal, stride non-literal
    3 init lhs != post assign lhs
 ```
 
